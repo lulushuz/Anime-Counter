@@ -14,3 +14,9 @@ dist/
 # OS files
 .DS_Store
 Thumbs.db
+
+# Generated at build time (scripts/build-themes.mjs)
+src/generated/
+
+# KV -> D1 migration output
+migrations-data/

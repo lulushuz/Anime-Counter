@@ -2,14 +2,28 @@ name = "anime-counter"
 main = "src/index.ts"
 compatibility_date = "2024-12-05"
 
-# İsteğe bağlı olarak yerel geliştirme için varsayılan port
-# [dev]
-# port = 8787
+# Build step: bundles sprite assets into src/generated/
+[build]
+command = "node scripts/build-themes.mjs"
+watch_dir = "src/assets"
 
+# KV Namespace binding (default / backward compatible)
+# Existing user counts remain safe and uninterrupted in KV
 [[kv_namespaces]]
 binding = "KV"
 id = "your-kv-namespace-id"
 
-[[r2_buckets]]
-binding = "R2"
-bucket_name = "anime-counter-assets"
+# Optional Cloudflare D1 database binding
+# To upgrade to D1, create DB with: npx wrangler d1 create anime-counter
+# [[d1_databases]]
+# binding = "DB"
+# database_name = "anime-counter"
+# database_id = "your-d1-database-id"
+# migrations_dir = "migrations"
+
+# Optional: per-username rate limiter binding
+# [[unsafe.bindings]]
+# name = "RATE_LIMITER"
+# type = "ratelimit"
+# namespace_id = "1001"
+# simple = { limit = 300, period = 60 }

@@ -1,20 +1,23 @@
 import { escapeHtml, validateColor } from '../utils/sanitize.js';
 
 export interface FlatThemeOptions {
-  bg?: string;        // Arka plan rengi (Hex veya CSS name)
-  color?: string;     // Yazı rengi (Hex veya CSS name)
-  icon?: string;      // Emoji (örn: 🔥, 🚀, ❤️)
-  animation?: string; // 'fade', 'slide', 'pulse', 'none'
-  stroke?: string;    // Çerçeve rengi
-  scale?: number;     // Boyutlandırma çarpanı (Örn: 1.5)
+  bg?: string;
+  color?: string;
+  icon?: string;
+  animation?: string;
+  stroke?: string;
+  scale?: number;
 }
 
+// Created once per isolate instead of on every request.
+const compactFormatter = new Intl.NumberFormat('en-US', {
+  notation: "compact",
+  compactDisplay: "short",
+  maximumFractionDigits: 1
+});
+
 function formatNumber(num: number): string {
-  return new Intl.NumberFormat('en-US', {
-    notation: "compact",
-    compactDisplay: "short",
-    maximumFractionDigits: 1
-  }).format(num);
+  return compactFormatter.format(num);
 }
 
 function getAnimationCSS(type: string): string {
@@ -42,12 +45,10 @@ function getAnimationCSS(type: string): string {
 export function generateFlatSVG(count: number, options: FlatThemeOptions = {}): string {
   const formattedCount = formatNumber(count);
   
-  // Renk parametrelerini enjeksiyona karşı koru
   const bgColor = validateColor(options.bg, '#21262d');
   const textColor = validateColor(options.color, '#c9d1d9');
   const strokeColor = validateColor(options.stroke, '#30363d');
   
-  // Emojiyi enjeksiyona karşı koru
   const iconText = options.icon ? `${escapeHtml(options.icon)} ` : '';
   const fullText = `${iconText}${formattedCount}`;
 

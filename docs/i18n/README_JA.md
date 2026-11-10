@@ -1,7 +1,7 @@
 # Anime Counter 🌸 (日本語ドキュメント)
 
 <p align="center">
-  <img src="https://anime-counter.lulushu.workers.dev/@demo-l?theme=l&num=0123456789&length=10&render=true" alt="Anime Counter Death Note テーマ" />
+  <img src="../../assets/gallery/l.svg" height="28" alt="Anime Counter Death Note テーマ" />
 </p>
 
 <p align="center">
@@ -20,13 +20,35 @@
 <summary><strong>🎨 すべてのテーマを表示（0-9ギャラリープレビュー）</strong></summary>
 <br>
 
-| テーマ | プレビュー | テーマ | プレビュー |
-| :--- | :--- | :--- | :--- |
-| **Death Note (L)** | <img src="https://anime-counter.lulushu.workers.dev/gallery/l.svg" height="28"/> | **Naruto** | <img src="https://anime-counter.lulushu.workers.dev/gallery/naruto.svg" height="40"/> |
-| **One Piece** | <img src="https://anime-counter.lulushu.workers.dev/gallery/onepiece.svg" height="35"/> | **Bleach** | <img src="https://anime-counter.lulushu.workers.dev/gallery/bleach.svg" height="35"/> |
-| **Dragonball** | <img src="https://anime-counter.lulushu.workers.dev/gallery/dragonball.svg" height="35"/> | **AOT** | <img src="https://anime-counter.lulushu.workers.dev/gallery/aot.svg" height="35"/> |
-| **Adventure Time** | <img src="https://anime-counter.lulushu.workers.dev/gallery/adventuretime.svg" height="33"/> | **Code Geass** | <img src="https://anime-counter.lulushu.workers.dev/gallery/codegeass.svg" height="32"/> |
-| **Gumball** | <img src="https://anime-counter.lulushu.workers.dev/gallery/gumball.svg" height="32"/> | **Monster** | <img src="https://anime-counter.lulushu.workers.dev/gallery/monster.svg" height="20"/> |
+### Death Note (L)
+<img src="../../assets/gallery/l.svg" height="20" alt="Death Note テーマ" />
+
+### Naruto
+<img src="../../assets/gallery/naruto.svg" height="20" alt="Naruto テーマ" />
+
+### One Piece
+<img src="../../assets/gallery/onepiece.svg" height="18" alt="One Piece テーマ" />
+
+### Bleach
+<img src="../../assets/gallery/bleach.svg" height="18" alt="Bleach テーマ" />
+
+### Dragonball
+<img src="../../assets/gallery/dragonball.svg" height="18" alt="Dragonball テーマ" />
+
+### Attack on Titan (AOT)
+<img src="../../assets/gallery/aot.svg" height="18" alt="AOT テーマ" />
+
+### Adventure Time
+<img src="../../assets/gallery/adventuretime.svg" height="16" alt="Adventure Time テーマ" />
+
+### Code Geass
+<img src="../../assets/gallery/codegeass.svg" height="16" alt="Code Geass テーマ" />
+
+### Gumball
+<img src="../../assets/gallery/gumball.svg" height="16" alt="Gumball テーマ" />
+
+### Monster
+<img src="../../assets/gallery/monster.svg" height="12" alt="Monster テーマ" />
 
 </details>
 

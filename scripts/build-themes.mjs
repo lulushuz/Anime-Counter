@@ -130,5 +130,12 @@ fs.writeFileSync(themesOutFile, themesSource);
 fs.writeFileSync(galleryOutFile, gallerySource);
 fs.writeFileSync(path.join(outDir, 'decor.ts'), decorSource);
 
+// Save static gallery SVGs to assets/gallery for direct GitHub README preview
+const galleryAssetsDir = path.join(__dirname, '../assets/gallery');
+fs.mkdirSync(galleryAssetsDir, { recursive: true });
+for (const [theme, svg] of Object.entries(gallerySvgs)) {
+  fs.writeFileSync(path.join(galleryAssetsDir, `${theme}.svg`), svg);
+}
+
 const kb = (Buffer.byteLength(themesSource) / 1024).toFixed(0);
-console.log(`✅ Embedded ${themeNames.length} themes & pre-rendered gallery SVGs (${kb} KB)`);
+console.log(`✅ Embedded ${themeNames.length} themes, pre-rendered gallery SVGs & exported to assets/gallery/ (${kb} KB)`);

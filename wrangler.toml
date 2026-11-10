@@ -11,7 +11,7 @@ watch_dir = "src/assets"
 # Existing user counts remain safe and uninterrupted in KV
 [[kv_namespaces]]
 binding = "KV"
-id = "your-kv-namespace-id"
+id = "127cc06ce77f44d1b14b9e542157690b"
 
 # Optional Cloudflare D1 database binding
 # To upgrade to D1, create DB with: npx wrangler d1 create anime-counter
